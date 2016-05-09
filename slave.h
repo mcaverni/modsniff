@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 #include <cerrno>
+#include <cstdio>
+
 using namespace std;
 
 class Slave
@@ -20,6 +22,7 @@ private:
     modbus_t *mContext;
     bool mSetupDone;
     int mAddress;
+    int mRequests;
 
     void logRequest(int length, u_int8_t *request);
     string printInt(int length, u_int8_t *request);
