@@ -1,9 +1,9 @@
 modsniff : slave.h slave.cpp main.cpp
-	@g++ -g -o modsniff slave.h slave.cpp main.cpp -L/usr/local/lib -lmodbus
+	@clang++ -g slave.h slave.cpp main.cpp -L/Users/massimo/WorkDir/sysroot/lib -lmodbus
 
 install: modsniff
-	cp -f modsniff /usr/local/bin
-	cp -f modsniff /usr/local/include/modsniff
+	cp -f modsniff /Users/massimo/WorkDir/sysroot/bin
+	cp -f modsniff /Users/massimo/WorkDir/sysroot/include/modsniff
 
 clean:
 	@rm -f modsniff
